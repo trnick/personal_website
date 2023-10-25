@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Simple demo Web page for CSE 134B" />
+	<meta name="keywords" content="HTML" />
+	<meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CSE 134B Homework 1 Website</title>
+	<link href="images/favicon.ico" rel="icon" />
+	<link href="styles/main.css" rel="stylesheet" />
+	<script>
+		window.addEventListener('load', function () {
+			let time = window.performance.timing,
+				complete = time.domComplete - time.domLoading;
+			document.getElementById('page-load-info').innerHTML = `<strong>Page Loaded in ${parseInt(complete)}ms
+			 on ${new Date().toLocaleString("en-US")}</strong>`;
+		});
+	</script>
+</head>
+
+<body>
+	<header>
+		
+		<section id="user-info-component">
+			<div id="user-info" style="display: none;">
+				<nav>
+					<a href="index.html">Home</a> |
+					<a href="about.html">About Me</a> |
+					<a href="projects.html">Projects</a> |
+                    <a class="active" href="#home">Contact</a> |
+                </nav>
+			</div>
+
+            <h1>My Contacts</h1>
+			
+			<script>
+				document.getElementById('user-info').style.display = 'block';
+			</script>
+			<noscript class="error">Error: JavaScript is disabled or blocked.</noscript>
+		</section>
+	</header>
+
+	<main>
+        <p> Contact Me:</p>
+
+        <form>
+            <label for="browser">Type:</label>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+              <option value="Email">
+              <option value="LinkedIn">
+              <option value="GitHub">
+            </datalist>
+        </form>
+
+        <br />
+
+        <textarea id="contact" name="contact" rows="4" cols="50"> </textarea>
+        <br>
+        <button type="button">Send</button>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <p> Learn more about my projects!</p>
+		<section class="contacts">
+            <iframe src="projects.html" height="200" width="900" title="Iframe Example"></iframe>
+            <template>
+                <img src="images/ntran.jpg" width="214" height="204">
+            </template>
+            <br />
+            <br />
+
+		</section>
+	</main>
+
+	<footer>
+		<hr/>
+		<p>This page was made by Nicholas Tran</p>
+	</footer>
+</body>
+
+</html>

@@ -22,17 +22,18 @@
 
 <body>
 	<header>
-		<h1>Nicholas Tran's Website</h1>
 		
 		<section id="user-info-component">
 			<div id="user-info" style="display: none;">
-				<div class="topnav">
-					<a class="active" href="#home">Home</a>
-					<a href="#about">About Me</a>
-					<a href="#projects">Projects</a>
-					<a href="#contact">Contact</a>
-				  </div>
+				<nav>
+					<a class="active" href="#home">Home</a> |
+					<a href="about.html">About Me</a> |
+					<a href="projects.html">Projects</a> |
+					<a href="contacts.html">Contact</a> |
+				</nav>
 			</div>
+
+			<h1>Nicholas Tran</h1>
 			
 			<script>
 				document.getElementById('user-info').style.display = 'block';
@@ -42,30 +43,57 @@
 	</header>
 
 	<main>
-		<h2>UCSD Images</h2>
-		<section class="img">
-			<img src="images/bear.png" alt="Warren Bear" height="430" width="700" />
-			<img src="images/triton.jpg" alt="Triton" height="430" width="700" />
-			<a href="https://ucsd.edu" target="_blank"><img src="images/ucsd.gif" alt="UCSD" height="177"
-				width="700"></a>
-			<br />
-			<section id="links">
-				<h2>Useful Links</h2>
-				<ul>
-					<li><a href="http://tritonlink.ucsd.edu">TritonLink</a></li>
-					<li><a href="http://canvas.ucsd.edu">Canvas</a></li>
-					<li><a href="http://w3.org">W3</a></li>
-				</ul>
-			</section>
+		<h2>Hello!</h2>
+		<section class="home">
+			<p> I'm an <i>aspiring software engineer/developer</i>, currently working as a software engineer intern towards 
+				the end of my college career. I enjoy problem solving and developing solutions to resolve current and 
+				real issues.
+				<br />
+				<br />
 
-		<section class="video">
-			<h2>UCSD Promo Video</h2>
-			<video controls height="393" width="700">
-				<source src="videos/videoplayback.mp4" type="video/mp4" />
-				<div class="error">Your browser does not support the video tag.</div>
+				<b>Proficient Languages:</b>
+				<ol>
+					<li> <span style="border-style: dotted;"> C++ </span> </li>
+					<li> Python </li>
+					<li> C </li>
+					<li> JavaScript </li>
+				</ol>
+				<br />
+				<br />
+
+				<b>Familiar frameworks/platforms:</b>
+				<ul>
+					<li> Azure DevOps </li>
+					<li> Node.js </li>
+					<li>REACT</li>
+					<li> Express </li>
+				</ul>
+
+			</p>
+
+			<video width="200" controls>
+				<source src="/video/programming.mp4" type="video/mp4">
+				Your browser does not support HTML video.
 			</video>
-		</section>
-			<br />
+			<p> Credit to codebycode22</p>
+			
+			<br \>
+			<br \>
+			<canvas id="canvas" width="200" height="100" style="border:1px solid #d3d3d3;"> 
+				Canvas doesn't work on the browser. </canvas>
+
+				<script>
+					var c = document.getElementById("canvas");
+					var pt = c.getContext("2d");
+					pt.moveTo(0,0);
+					pt.lineTo(200,100);
+					pt.stroke();
+					pt.moveTo(200,0);
+					pt.lineTo(0,100);
+					pt.stroke();
+				</script>
+			<br \>
+			<br \>
 
 		</section>
 	</main>
